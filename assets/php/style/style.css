@@ -1,0 +1,67 @@
+.wrapper {
+    box-shadow: 0 0 20px #000;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+svg {
+    width: 26px;
+    height: 26px;
+    margin-left: 6px;
+}
+
+.download {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+body {
+    padding: 20px;
+    background: url(../../images/blured-bg.jpg);
+}
+
+table {
+    position: relative;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    border-collapse: collapse;
+    color: #686461;
+}
+
+caption {
+    padding: 10px;
+    color: white;
+    background: #c19256;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+
+th {
+    border-bottom: 3px solid #c0b598;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border: 2px solid #c19256;
+}
+
+tr:nth-child(1) {
+    background: #E8DF83 !important;
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background: #fff8ac;
+}
+
+tr:nth-child(even) {
+    background: #fff;
+}
