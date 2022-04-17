@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Школьное меню</name>
+    <author>Иван Кобцев</author>
+    <version>0.1.0</version>
+    <description>Модуль образовательным организациям для более удобного и правильного размещения школьного меню 1-4, 5-11 классов.</description>
+    <files>
+        <filename>mod_schoolmenu.xml</filename>
+        <filename module="mod_schoolmenu">mod_schoolmenu.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <folder>elements</folder>
+        <folder>assets</folder>
+    </files>
+    <config>
+        <fields name="params" addfieldpath="/modules/mod_schoolmenu/elements">
+            <fieldset name="basic-options">
+                <field name="menu-style" type="list" default="0" class="styles-field" description="Выберите внешний вид меню">
+                    <option value="0">Стандартный</option>
+                    <option value="1">Пользовательский</option> 
+                </field>
+                <field name="bg" type="list" default="0" class="styles-field" description="Выберите вид фона">
+                    <option value="0">Цвет</option>
+                    <option value="1">Картинка</option>
+                    <option value="2">Нет</option>
+                </field>
+                <hr />
+                <field name="bg-color" type="list" class="bg-text-field" default="#fff" placeholder="#fff" description='Выберите цвет для заднего плана'>
+                    <option value="#fff">Белый</option>
+                    <option value="#000">Чёрный</option>
+                    <option value="#888">Серый</option>
+                    <option value="#00f">Синий</option> 
+                    <option value="#f00">Красный</option>
+                    <option value="#0f0">Зелёный</option>
+                    <option value="#FFA500">Оранжевый</option>
+                    <option value="#FFFF00">Жёлтый</option> 
+                    <option value="#FF00FF">Пурпурный</option>
+                    <option value="#FF7F50">Коралловый</option>
+                </field>
+                <field name="fg-color" type="list" class="bg-text-field" default="#000" placeholder="#000" description='Выберите цвет для переднего плана'>
+                    <option value="#fff">Белый</option>
+                    <option value="#000">Чёрный</option>
+                    <option value="#888">Серый</option>
+                    <option value="#00f">Синий</option> 
+                    <option value="#f00">Красный</option>
+                    <option value="#0f0">Зелёный</option>
+                    <option value="#FFA500">Оранжевый</option>
+                    <option value="#FFFF00">Жёлтый</option> 
+                    <option value="#FF00FF">Пурпурный</option>
+                    <option value="#FF7F50">Коралловый</option>
+                </field>
+                <field name="bg-image" type="list" default="bg-1.jpg" class="styles-field" description="Выберите фоновую картинку">
+                    <option value="bg-1.jpg">1</option>
+                    <option value="bg-2.jpg">2</option>
+                    <option value="bg-3.jpg">3</option>
+                    <option value="bg-4.jpg">4</option> 
+                    <option value="bg-5.jpg">5</option>
+                    <option value="bg-6.jpg">6</option>
+                </field>
+                <field name="bg-image-brightness" type="list" default=" " class="styles-field" description="Затемнить фоновую картинку для лучшей читаемости текста">
+                    <option value=" ">Выкл</option>
+                    <option value=" brightness(.8)">Вкл</option>
+                </field>
+                <field name="bg-image-blur" type="list" default=" " class="styles-field" description="Включить размытие фоновой картинки для лучшей читаемости текста">
+                    <option value=" ">Выкл</option>
+                    <option value=" blur(2px)">Вкл</option>
+                </field>
+                <hr />
+                <field name="text-shadow" type="list" default="1" class="styles-field" description="Установить тень для текста в меню">
+                    <option value="0">Выкл</option>
+                    <option value="1">Вкл</option>
+                </field>
+                <field name="drop-shadow" type="list" default="1" class="styles-field" description="Установить тень для иконок в меню">
+                    <option value="0">Выкл</option>
+                    <option value="1">Вкл</option>
+                </field>
+                <field name="box-shadow" type="list" default="1" class="styles-field" description="Установить тень для всех блоков меню">
+                    <option value="0">Выкл</option>
+                    <option value="1">Вкл</option>
+                </field>
+                <hr />
+                <field name="titles" type="list" default="block" class="styles-field" description='Показывать подписи "Меню 1-4 классов" и "Меню 5-11 классов"'>
+                    <option value="none">Скрывать</option>
+                    <option value="block">Показывать</option>
+                </field>
+                <field name="five-to-eleven-menu" type="list" default="0" class="styles-field" description="Показывать также меню для 5-11 классов">
+                    <option value="0">Скрывать</option>
+                    <option value="1">Показывать</option>
+                </field>
+                <field name="date-separator" type="list" default="-" class="date-sep-field" description="Выберите разделитель в отображаемой дате">
+                    <option value="-">"-" (дефис)</option>
+                    <option value=".">"." (точка)</option>
+                    <option value="/">"/" (слеш)</option>
+                </field>
+                <field name="date-year" type="list" default="0" class="styles-field" description="Показывать дату с текущим годом (формата ДД.ММ.ГГГГ)">
+                    <option value="0">Выкл</option>
+                    <option value="1">Вкл</option>
+                </field>
+                <field name="font-size" type="list" default="12" class="font-size-field" description="Выберите размер шрифта основного текста">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                </field>
+                <field name="file-extension" type="text" default=".xlsx" class="ext-text-field" placeholder='.xlsx' description='Впишите расширение файлов меню (".xlsx", ".pdf", др.)'></field>
+                <field type="asset"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

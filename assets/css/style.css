@@ -1,0 +1,114 @@
+.module-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 20px; */
+    align-items: center;
+}
+
+.bg-text-field {
+    display: none !important;
+}
+
+.wday-div,
+.date-div {
+    position: relative;
+    pointer-events: none;
+    user-select: none;
+    display: block !important;
+    font-weight: 700;
+    white-space: nowrap !important;
+}
+
+.wday-div {
+    width: 38.18%;
+    margin: 0 3.5%;
+}
+
+.date-div {
+    width: 27.77%;
+    margin: 0 3.5%;
+}
+
+.link-menu,
+.inactive-svg {
+    display: block;
+    width: 30px;
+    height: 30px;
+    z-index: 10 !important;
+}
+
+.inactive-svg {
+    cursor: not-allowed;
+}
+
+.inactive-svg,
+.active-svg {
+    pointer-events: none !important;
+}
+
+.link-menu:hover {
+    color: rgba(0, 0, 0, 0.5) !important;
+    background: none !important;
+    transition: .5s all;
+}
+
+.li-menu {
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.kid-menu,
+.middle-menu {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.kid-menu::before,
+.middle-menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.middle-menu {
+    display: none;
+    margin-top: 10px !important;
+}
+
+.kid-menu::before {
+    background-position: top !important;
+}
+
+.middle-menu::before {
+    background-position: bottom !important;
+}
+
+.menu-icon {
+    display: flex !important;
+    margin: 0 3.5%;
+    width: 12%;
+}
+
+.menu-title {
+    user-select: none;
+    pointer-events: none;
+    position: relative;
+    text-align: center;
+    font-size: 120%;
+    font-weight: 700;
+    margin: 5px 0;
+}
